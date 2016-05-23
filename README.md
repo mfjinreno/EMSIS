@@ -1,2 +1,0 @@
-# EMSIS
-EMS integrated software
