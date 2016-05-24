@@ -5,9 +5,26 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta charset="utf-8">   
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-
+	<% if user_signed_in? %>
+	  <nav class="navbar navbar-default navbar-fixed-top">
+	      <div class="container">
+	        <div id="navbar" class="navbar-collapse collapse">
+	        <div class="navbar-brand bolded">EMSIS</div>
+	          <ul class="nav navbar-nav">
+	          	<li class = "divider-vertical"></li>
+	            <li><%=link_to('Home', controller:'/home')%> </li> 
+	          </ul>
+	          <ul class="nav navbar-nav navbar-right">
+	            <li class="active"><%=link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+	          </ul>
+	        </div>
+	      </div>
+	    </nav>
+    <%end%>
 <%= yield %>
 
 </body>

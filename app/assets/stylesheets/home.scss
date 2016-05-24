@@ -2,3 +2,82 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$theme: #D91E18;
+$theme_b: #3A539B;
+$theme_gr:#D2D7D3;
+$theme_gr_drk:#6C7A89;
+$theme_grn:#2ECC71;
+$theme_text: #6C7A89;
+$bts: .5s;
+
+body{
+	background-color: #D2D7D3 !important;
+}
+
+hr.blue{
+    background-color:$theme_b;
+    border-color: $theme_b;
+    color:$theme_b;
+    margin-top:0px;
+}
+
+.active-vehicle-status{
+	background:$theme_grn;
+}
+
+.panel-body{
+	.scroller{
+		overflow: auto;
+		height:50%
+
+	}
+}
+
+.row .heading{
+	padding-left: 5%;
+	color:$theme_gr_drk;
+}
+
+.row .padded-top{
+	padding-top: 10%;
+}
+
+
+.vehicle{
+	
+	padding-left: 2%;
+	padding-right: 2%;
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+.status-box {
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  border: 1px solid rgba(0, 0, 0, .2);
+}
+
+
+@media (min-width: 0px) and (max-width:999px){
+	.show-mobile {
+        display: block;
+        max-width:80%;
+        position:relative;
+        margin:auto;
+     }
+      .hide-mobile {
+        display: none;
+     }   
+}
+
+/* BEGIN NORMAL BROWSER STYLINGS */
+@media  (min-width:1000px){
+	.show-mobile {
+        display: none;
+     }
+      .hide-mobile {
+        display: block;
+     }
+}
