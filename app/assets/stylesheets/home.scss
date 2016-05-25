@@ -10,8 +10,9 @@ $theme_grn:#2ECC71;
 $theme_text: #6C7A89;
 $bts: .5s;
 
-body{
+html, body{
 	background-color: #D2D7D3 !important;
+	height:100%;
 }
 
 hr.blue{
@@ -24,13 +25,17 @@ hr.blue{
 .active-vehicle-status{
 	background:$theme_grn;
 }
+.container{
+	height:100% !important;
+}
 
-.panel-body{
-	.scroller{
+.panel-body .vehic{
+	padding:4px !important;
+}
+
+.panel-body .scroller{
 		overflow: auto;
-		height:50%
-
-	}
+		min-height:50% !important;
 }
 
 .row .heading{
@@ -58,6 +63,52 @@ hr.blue{
   margin: 5px;
   border: 1px solid rgba(0, 0, 0, .2);
 }
+.row.padded-top{
+  height:50%!important;
+ }
+
+ .col-xs-12.col-sm-12.col-md-8.col-lg-8.col-xl-8, .panel.panel-default.panel-out, .panel-body.scroller{
+ 	height:100% !important;
+ }
+
+.check-in{
+	background-color:$theme_grn!important;
+	color:white!important;
+	border-color: $theme_grn!important;
+
+}
+.check-in:active{
+	background-color: $theme_grn !important;
+	opacity:.9 !important;
+	color:white !important;
+	border-color: $theme_grn !important;
+}
+
+.check-in:hover, .check-in:visited{
+		background-color: $theme_grn;
+		opacity:.7;
+		color:white;
+		border-color: $theme_grn;
+}
+
+.maint-req{
+	background-color: $theme!important;
+	color:white!important;
+	border-color: $theme!important;
+}
+.maint-req:active{
+	background-color: $theme !important;
+	opacity:.9 !important;
+	color:white !important;
+	border-color: $theme !important;
+}
+
+.maint-req:hover, .maint-req:visited{
+		background-color: $theme;
+		opacity:.7;
+		color:white;
+		border-color: $theme_gr;
+}
 
 
 @media (min-width: 0px) and (max-width:999px){
@@ -79,5 +130,7 @@ hr.blue{
      }
       .hide-mobile {
         display: block;
+        height:100%;
+
      }
 }
